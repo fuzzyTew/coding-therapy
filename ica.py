@@ -68,6 +68,7 @@ class TestApp(App):
         parent.add_widget(self.gobutton, index = 2)
         parent.add_widget(self.switchcambutton, index = 3)
         self.parent = parent
+        self.gobutton.state = 'down'
         self.on_gobutton(self.gobutton)
         return parent
     def on_gobutton(self, gobutton):
