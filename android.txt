@@ -1,3 +1,0 @@
-title=Test
-author=Karl Semich
-orientation=portrait
