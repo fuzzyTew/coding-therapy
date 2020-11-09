@@ -50,7 +50,6 @@ class Graph(Image):
         self.texture = self.fbo.texture
     def add(self, *values):
         for point, value in zip(self.points, values):
-            print(value)
             point.points = (self.fbo.size[0] - 0.5,(value + 1) / 2 * self.fbo.size[1])
         self.fbo.draw()
         self.canvas.ask_update()
@@ -69,6 +68,7 @@ class TestApp(App):
         parent.add_widget(self.gobutton, index = 2)
         parent.add_widget(self.switchcambutton, index = 3)
         self.parent = parent
+        self.on_gobutton(self.gobutton)
         return parent
     def on_gobutton(self, gobutton):
         if self.index not in self.cameras:
